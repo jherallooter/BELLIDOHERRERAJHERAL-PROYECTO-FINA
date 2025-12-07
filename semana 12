@@ -1,0 +1,56 @@
+---
+title: "Tarea de la semana doce upsj"
+format: html
+editor: visual
+echo: true
+---
+
+## Calcular las Medidas de Disperción
+
+```         
+
+```
+
+```{r}
+#IMPORTAR EL ARCHIVO CON EL CUAL SE VA TRABAJAR 
+data<- read_csv("C:/Users/FIORELLA/Downloads/conoc_actit_factor_cancer_cervical.csv")
+```
+
+```{r}
+#VER LAS 6 PRIERAS FILAS DE LA DATA 
+head(data)
+
+```
+
+```{r}
+#ESTRUCTURA DE LA DATA 
+str(data)
+```
+
+```{r}
+#DESVIACIÓN ESTANDAR
+sd(data$edad,na.rm = TRUE)
+
+
+```
+
+```{r}
+#RANGO
+range(data$edad,na.rm = TRUE)
+```
+
+```{r}
+#RANGO INTERCUARTILICO
+IQR(data$edad,na.rm = TRUE)
+```
+
+```{r}
+#MEDIDAS DE POSICIÓN 
+quantile(data$edad,probs =c(0.25,0.5,0.75,0.90),na.rm = TRUE)
+summary(data$edad)
+```
+
+```{r}
+#RESUEMN DE TODAS LAS VARIABLES
+summary(data)
+```
