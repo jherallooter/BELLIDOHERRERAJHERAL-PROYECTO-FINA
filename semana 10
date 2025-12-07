@@ -1,0 +1,40 @@
+---
+title: "TRABAJO-SEMANA10"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#IMPORTAR EL ARCHIVO CON EL CUAL SE VA TRABAJAR 
+
+data <- read_csv("D:/Backup/Descargas/conoc_actit_factor_cancer_cervical (6).csv")
+```
+
+You can add options to executable code like this
+
+```{r}
+#LAS MEDIDAD DE TENDENCIA CENTRAL 
+
+#MEDIA ARITMETICA 
+mean(data$edad)
+```
+
+```{r}
+#MEDIANA 
+median(data$edad)
+
+```
+
+```{r}
+#MODA 
+mode_edad<-names(sort(table(data$edad),decreasing = TRUE))
+
+```
