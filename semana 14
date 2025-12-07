@@ -1,0 +1,40 @@
+---
+title: "SEMANA 14"
+author: "GABRIELA ORTIZ PALLIN"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+data<-read.csv("C:/Users/GABRIELA/Downloads/conoc_actit_factor_cancer_cervical.csv")
+```
+
+You can add options to executable code like this
+
+```{r}
+#analisis univariado 
+summary(data$edad_relacion_sexual)
+summary(data$religion)
+summary(data$antec_ets)
+
+```
+
+```{r}
+#REGRESIÓN SIMPLE
+modelo_simple <- lm(edad_relacion_sexual ~religion, data = data)
+summary(modelo_simple)
+```
+
+```{r}
+#ANALISIS MULTIVARIADO
+model_multi <- lm(edad_relacion_sexual ~religion + antec_ets, data = data)
+summary(model_multi)
+```
